@@ -1928,7 +1928,7 @@ NSString *const kMXRoomInitialSyncNotification = @"kMXRoomInitialSyncNotificatio
     }
     
     // Update data on the homeserver side
-    [mxSession.matrixRestClient sendReadMarker:self.roomId readMarkerEventId:eventId readReceiptEventId:receiptEventId success:nil failure:nil];
+    [mxSession.matrixRestClient sendReadReceipt:self.roomId eventId:eventId success:nil failure:nil];
 }
 
 #pragma mark - Direct chats handling
